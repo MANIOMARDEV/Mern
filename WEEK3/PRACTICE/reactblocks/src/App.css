@@ -1,0 +1,84 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+.App {
+  background-color: #dddddd;
+  padding: 2%;
+}
+.header{
+  background-color: #6aa84f;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  border: solid 3px;
+  border-color: black;
+  
+}
+.container2{
+  display: flex;
+  width: 100%;
+}
+.navigation{
+  background-color:#6fa8dc; 
+  width: 25%;
+  height: 600px;
+  margin-top: 2%;
+  display: inline-flex;
+  border: solid 3px;
+  border-color: black;
+}
+
+.main{
+  background-color: brown;
+  width: 72%;
+  height: 700px;
+  display: inline-flex;
+  margin-top: 2%;
+  margin-left: 2%;
+  padding: 1%;
+  flex-direction: column;
+  justify-content: space-around;
+  border: solid 3px;
+  border-color: black;
+}
+.columns{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+.column1{
+  background-color: #ffd966;
+  width: 30%;
+  height: 500px;
+  display: inline-flex;
+  flex-direction: column;
+  border: solid 3px;
+  border-color: black;
+}
+.column2{
+  background-color: #ffd966;
+  width: 30%;
+  height: 500px;
+  display: inline-flex;
+  flex-direction: column;
+}
+.column3{
+  background-color: #ffd966;
+  width: 30%;
+  height: 500px;
+  display: inline-flex;
+  flex-direction: column;
+}
+.advertisement{
+  width: 97%;
+  height: 100px;
+  background-color: #b4a7d6;
+  display: flex;
+  margin-left: 2%;
+  margin-right: 2%;
+  border: solid 3px;
+  border-color: black;
+  
+}
