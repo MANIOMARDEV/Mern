@@ -1,15 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-import HelloDojo from './components/Hello-Dojo';
+import Poke from './components/Pokemon';
 
 function App() {
   return (
     <div className="App">
-      <HelloDojo />
+
+      <Poke />
+
     </div>
   );
 }
 
 export default App;
-
-<button onClick={incrementnumber}>+</button>
