@@ -21,8 +21,6 @@ function App() {
     setNewTodo("");
   };
 
-
-
   const handleTodoDelete = (deleteId) => {
     const filterTodos = todos.filter((todo, i) => {
       return i !== deleteId;
@@ -32,11 +30,8 @@ function App() {
   }
 
   const handleToggleComplete = (updateId) => {
-    const updatedTodos = todos.map((todo, i)=> {
+    const updatedTodos = todos.map((todo, i) => {
       if (i === updateId){
-        // Used but mutates objects
-        // todo.complete = !todo.complete;
-        // Used in real world use
         const updatedTodo = {...todo, complete: !todo.complete};
         return updatedTodo;
       }
@@ -50,21 +45,21 @@ function App() {
   return (
     <div style={{textAlign: "center"}}>
       <form onSubmit={(e) => {
-          handleNewTodoSubmit(e);
-        }}>
+        handleNewTodoSubmit(e);
+      }}>
         <input onChange={(e) => {
-            setNewTodo(e.target.value);
-          }} type="text" value={newTodo} style={{margin:"10px"}} />
-      <div>
-        <button>Add Todo</button>
-      </div>
+          setNewTodo(e.target.value);
+        }} type="text" value={newTodo} style={{margin:"10px"}} />
+        <div>
+          <button>Add Todo</button>
+        </div>
       </form>
 
       <hr />
-      {todos.map((todos, i) => {
+      {todos.map((todo, i) => {
         const todoClasses = [];
 
-        if (todos.complete) {
+        if (todo.complete) {
           todoClasses.push("strike-through");
         }
 
@@ -72,8 +67,8 @@ function App() {
           <div key={i}>
             <input onChange={(e) => {
               handleToggleComplete(i);
-            }} checked={todos.complete} type="checkbox" />
-            <span className={todoClasses.join(" ")}>{todos.text}</span>
+            }} checked={todo.complete} type="checkbox" />
+            <span className={todoClasses.join(" ")}>{todo.text}</span>
             <button onClick={(e) => {
               handleTodoDelete(i)
             }} style={{marginLeft:"10px"}}>Delete</button>
@@ -84,4 +79,6 @@ function App() {
     </div>
   );
 }
+
 export default App;
+

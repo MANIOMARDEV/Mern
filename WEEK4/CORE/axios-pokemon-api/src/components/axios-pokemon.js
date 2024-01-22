@@ -10,7 +10,10 @@ const AxiosPoke = (props) => {
             .then((response) => {
                 setPokemon(response.data.results);
             })
-            .catch((err) => console.log(err));
+            .catch((err) => {
+                console.error('Error fetching Pokemon data:', err);
+                setPokemon([]); 
+            });
     }, []);
 
     return (
@@ -21,7 +24,7 @@ const AxiosPoke = (props) => {
                 </div>
             ))}
         </div>
-    )
-}
+    );
+};
 
 export default AxiosPoke;

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Poke = (props) => {
     const [pokemon, setPokemon] = useState([]);
@@ -6,12 +6,12 @@ const Poke = (props) => {
     useEffect(() => {
         fetch('https://pokeapi.co/api/v2/pokemon?limit=1118')
             .then(response => response.json())
-            .then(response => setPokemon(response.results))
-}, []);
+            .then(response => setPokemon(response.results));
+    }, []);
 
-return (
+    return (
         <div>
-            {pokemon.length > 0 && pokemon.map((pokeMn, index)=>{
+            {pokemon.length > 0 && pokemon.map((pokeMn, index) => {
                 return (<div key={index}>{pokeMn.name}</div>)
             })}
         </div>
