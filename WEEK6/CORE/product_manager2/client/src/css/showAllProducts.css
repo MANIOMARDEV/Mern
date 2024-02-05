@@ -1,0 +1,11 @@
+.showAllProducts h2 {
+    text-align: center;
+}
+
+.showAllProducts p {
+    background-color: none;
+}
+
+.singleProduct {
+    background-color: lightblue;
+}

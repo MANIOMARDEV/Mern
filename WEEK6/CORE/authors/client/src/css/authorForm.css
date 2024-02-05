@@ -1,0 +1,34 @@
+.authorForm label {
+    color: grey;
+}
+
+/* .authorForm p {
+    background-color: lightgrey;
+    width: 350px;
+    height: 40px;
+    vertical-align: middle;
+    line-height: 40px;
+} */
+
+.card {
+    padding: 5px;
+}
+
+.div-block {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.nameField {
+    margin-left: 10px;
+}
+
+.btn-default-style {
+    display: inline-block;
+    width: 80px;
+    color: white;
+    background-color: lightskyblue;
+    height: 30px;
+    border-radius: 20px;
+    margin-right: 10px;
+}

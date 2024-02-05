@@ -1,0 +1,36 @@
+.showAllAuthors h2 {
+    text-align: center;
+}
+
+.showAllAuthors p {
+    background-color: none;
+}
+
+.singleAuthor {
+    background-color: lightblue;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+.actions-header {
+    width: 200px
+}
+
+.author-header {
+    width: 100px;
+    
+}
+
+.author-name {
+    margin-left: 20px;
+    text-align: center;
+}
+
+.btn-edit {
+    width: 60px;
+    margin-right: 20px;
+    margin-left: 30px;
+    border-radius: 20px;
+}

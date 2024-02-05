@@ -1,0 +1,28 @@
+h1 {
+    text-align: center;
+}
+
+form {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-nav {
+    background-color: lightseagreen;
+    border-radius: 20px;
+}
+
+.App {
+    width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px black;
+    height: 300px;
+    padding-left: 10px;
+}
+
+.btn-delete {
+    background-color: red;
+    width: 60px;
+    border-radius: 20px;
+}
