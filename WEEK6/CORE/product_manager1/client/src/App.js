@@ -1,10 +1,13 @@
-import React from 'react';
-import Main from './views/Main';
+import "./App.css";
+import CreateProduct from "./components/CreateProduct";
+
+
 function App() {
     return (
         <div className="App">
-            <Main />
+            <CreateProduct/>
         </div>
     );
 }
+
 export default App;
