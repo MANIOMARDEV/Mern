@@ -1,38 +1,53 @@
+/* Overall layout */
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header styling */
+header {
+  font-size: 2em; /* Equivalent to xx-large */
+  margin: 25px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Form styling */
+.form-fields {
+  color: #888; /* Equivalent to rgb(136, 135, 135) */
+  display: grid; /* Changed to grid for more control */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 15px; /* Gap between grid items */
+  width: 80%; /* Changed to percentage for responsiveness */
+  margin: auto;
+  border-radius: 30px;
+  padding: 15px;
+  background-color: #ececec; /* Equivalent to rgb(236, 236, 236) */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.form-fields input[type="text"],
+.form-fields input[type="email"] {
+  border-radius: 30px;
+  padding: 10px;
+  border: 1px solid #ccc; /* Added border for better visibility */
 }
 
-.App-link {
-  color: #61dafb;
+/* Button styling */
+.submit-input,
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  margin: 5px;
+  background-color: #007bff; /* Changed button color */
+  color: #fff; /* Changed button text color */
+  cursor: pointer; /* Add pointer cursor */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Individual product component */
+.oneProduct-component {
+  margin: 10vh auto; /* Adjusted margin for better spacing */
+}
+
+/* Link styling */
+a {
+  text-decoration: none;
+  color: #888; /* Equivalent to rgb(136, 135, 135) */
 }

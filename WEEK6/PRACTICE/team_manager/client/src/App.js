@@ -1,38 +1,20 @@
+import logo from './logo.svg';
 import './App.css';
-import {Routes, Route} from 'react-router-dom';
-import NavBar from './components/NavBar';
-import PlayerStatus from './components/PlayerStatus';
-import ListPlayers from './components/ListPlayers';
-import AddPlayer from './components/AddPlayer';
-import GameBar from './components/GameBar';
-import GameStatus from './components/GameStatus';
-
+import { Link, Route, Routes } from 'react-router-dom';
+import PlayersTableView from './views/PlayersTableView';
+import PlayerAddView from './views/PlayerAddView';
+import GameView from './views/GamesView'
 function App() {
   return (
     <div className="App">
-      <NavBar/>
+      <div className='h4'>
+        <Link to={"/players/list"}>Manage Players</Link><span> | </span>
+        <Link to={"/status/game/1"}>Manage Player Status</Link>
+      </div>
       <Routes>
-        <Route path='/players/list' element={<>
-          <PlayerStatus />
-          <ListPlayers />
-        </>} />
-        <Route path='/players/add' element={<>
-          <PlayerStatus />
-          <AddPlayer />
-        </>} />
-        <Route path='/status/game' element={<GameBar/>} />
-        <Route path='/status/game/1' element={<>
-          <GameBar />
-          <GameStatus/>
-        </>} />
-        <Route path='/status/game/2' element={<>
-          <GameBar />
-          <GameStatus/>
-        </>} />
-        <Route path='/status/game/3' element={<>
-          <GameBar />
-          <GameStatus/>
-        </>} />
+        <Route path='/players/list' element={<PlayersTableView />} />
+        <Route path='/players/new' element={<PlayerAddView />} />
+        <Route path='/status/game/:num' element={<GameView />} />
       </Routes>
     </div>
   );

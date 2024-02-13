@@ -1,19 +1,43 @@
 import React from 'react';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import Main from './views/Main';
-import AuthorForm from './components/AuthorForm'
-import AuthorDetails from './views/AuthorDetails';
-import { Router } from '@reach/router';
+import AddAuthor from './views/AddAuthor';
+import EditAuthor from './views/EditAuthor';
+import './App.css';
+
+const shadowBox = {
+  backgroundColor: 'silver',
+  boxShadow: '5px 5px 5px black',
+  borderRadius: '8px'
+
+
+}
 
 function App() {
-    return (
-        <div className="App">
-            <h1>Favorite Authors</h1>
-            <Router>
-                <Main path="/" default/>
-                <AuthorForm path={"/authors/add"}/>
-                <AuthorDetails path={"/authors/edit/:id"}/>
-            </Router>
-        </div>
-    );
+  return (
+    <div className="App container mt-5 p-4" style={shadowBox}>
+      <h1>Favorite Authors</h1>
+      <Switch>
+
+        <Route exact path="/authors/new">
+          <AddAuthor />
+        </Route>
+
+        <Route exact path="/authors/:id/edit">
+          <EditAuthor />
+        </Route>
+
+        <Route exact path="/authors">
+          <Main />
+        </Route>
+
+        <Route path="/">
+          <Redirect to="/authors"/>
+        </Route>  
+
+      </Switch>
+    </div>
+  );
 }
+
 export default App;
