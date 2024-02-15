@@ -1,9 +1,15 @@
-const AuthorController = require('../controllers/author.controller');
+const AuthorController = require('../controllers/author.controllers')
 
-module.exports = function (app) {
-    app.get('/api/authors', AuthorController.findAllAuthors);
-    app.post('/api/authors', AuthorController.createAuthor);
-    app.get('/api/authors/:id', AuthorController.findOneAuthor);
-    app.put('/api/authors/:id', AuthorController.updateAuthor);
-    app.delete('/api/authors/:id', AuthorController.deleteAuthor);
+module.exports = (app) => {
+    
+    app.post('/api/addAuthor', AuthorController.addAuthor)
+    
+    app.get('/api/getAllAuthors', AuthorController.getAllAuthors)
+
+    app.get('/api/oneAuthor/:id', AuthorController.showAuthor)
+
+    app.put('/api/editAuthor/:id', AuthorController.editAuthor)
+
+    app.delete('/api/deleteAuthor/:id', AuthorController.deleteAuthor)
+
 }

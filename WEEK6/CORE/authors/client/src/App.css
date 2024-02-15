@@ -1,38 +1,53 @@
+/* Variables */
+:root {
+  --primary-color: #282c34; /* Dark primary color */
+  --accent-color: #61dafb; /* Accent color */
+  --font-size-base: 10px; /* Base font size */
+}
+
+/* General styles */
 .App {
   text-align: center;
 }
 
+/* Logo styles */
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 10vmin; /* Responsive logo size */
+  pointer-events: none; /* Prevent logo from being interactive */
 }
 
+/* Logo animation */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: spin 20s infinite linear; /* Logo spinning animation */
   }
 }
 
+/* Header styles */
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: var(--primary-color); /* Use dark primary color for header background */
+  min-height: 100vh; /* Full height */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column; /* Stack child elements vertically */
+  align-items: center; /* Center align child elements horizontally */
+  justify-content: center; /* Center align child elements vertically */
+  font-size: calc(var(--font-size-base) + 2vmin); /* Responsive font size */
+  color: white; /* White text color */
 }
 
+/* Link styles */
 .App-link {
-  color: #61dafb;
+  color: var(--accent-color); /* Use accent color for links */
 }
 
-@keyframes App-logo-spin {
+/* Keyframes for logo spin */
+@keyframes spin {
   from {
-    transform: rotate(0deg);
+    transform: rotate(0deg); /* Initial rotation */
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg); /* Rotate to 360 degrees */
   }
 }
+
+
