@@ -8,6 +8,5 @@ const AuthorSchema = new mongoose.Schema({
     }
 }, { timestamps: true })
 
-///// make the objectName schema and export \\\\\
 const Author = mongoose.model("Author", AuthorSchema)
 module.exports = Author;
